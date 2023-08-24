@@ -17,3 +17,15 @@ let right2 = 0;
 let right3 = 0;
 let right4 = 0;
 let right5 = 0;
+
+options.forEach((option) => {
+    option.addEventListener("click", (event) => {
+        removeActive();
+        event.target.classList.add("active");
+    });
+});
+function removeActive() {
+    options.forEach((option) => {
+        option.classList.remove("active");
+    })
+}
